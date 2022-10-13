@@ -20,15 +20,19 @@ const App = () => {
       }}
     >
       <div>
-        <h2>Popover</h2>
+        <h2 className="font-bold text-xl mb-4">Popover</h2>
         <Popover>
-          <PopoverTrigger>trigger</PopoverTrigger>
+          <PopoverTrigger className="bg-indigo-500 hover:bg-indigo-600">
+            trigger
+          </PopoverTrigger>
           <PopoverContent>content</PopoverContent>
         </Popover>
       </div>
 
       <div>
-        <h2>Accordion (CSS modules)</h2>
+        <h2 className="font-bold text-xl mt-12 mb-4">
+          Accordion (CSS modules)
+        </h2>
         <Accordion type="single">
           <AccordionItem value="item-1">
             <AccordionHeader>
