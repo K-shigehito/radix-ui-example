@@ -6,6 +6,7 @@ import {
   AccordionTrigger,
   AccordionHeader,
 } from "./components/Accordion/Accordion";
+import Dialog from "./components/Dialog/Dialog";
 
 const App = () => {
   return (
@@ -49,6 +50,8 @@ const App = () => {
           </AccordionItem>
         </Accordion>
       </div>
+
+      <Dialog />
     </div>
   );
 };
