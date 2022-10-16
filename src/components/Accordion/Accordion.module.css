@@ -1,46 +1,25 @@
-.route {
-  border-radius: 4px;
-  width: 300px;
-  background-color: hsl(124, 39%, 79.7%);
-  box-shadow: 0 2px 10px gray;
+@keyframes open {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
 }
-.item {
-  overflow: hidden;
-  margin-top: 1px;
+
+@keyframes close {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
 }
-.item:first-child {
-  margin-top: 0;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+
+.accordion-content[data-state='open'] {
+  animation: open 300ms ease-out;
 }
-.item:lst-child {
-  margin-top: 0;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-.item:focus-within {
-  position: 'relative';
-  z-index: 1;
-  box-shadow: 0 0 0 2px gray;
-}
-.header {
-  display: flex;
-  font-weight: bold;
-}
-.trigger {
-  background-color: transparent;
-  padding: 16px;
-  height: 45;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 15px;
-  line-height: 1;
-  cursor: pointer;
-  box-shadow: 0 1px 0 gray;
-}
-.content {
-  background-color: hsl(120, 60%, 97.1%);
-  padding: 15px 20px;
+
+.accordion-content[data-state='close'] {
+  animation: close 300ms ease-out;
 }

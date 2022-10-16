@@ -1,22 +1,33 @@
-import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import { withClassName } from '../../utils/withClassName';
 import styles from './Accordion.module.css';
+import * as Accordion from '@radix-ui/react-accordion';
 
-export const Accordion = withClassName(AccordionPrimitive.Root, styles.route);
+type Item = {
+  title: string;
+  content: string;
+};
 
-export const AccordionItem = withClassName(
-  AccordionPrimitive.Item,
-  styles.item,
-);
-export const AccordionHeader = withClassName(
-  AccordionPrimitive.Header,
-  styles.header,
-);
-export const AccordionContent = withClassName(
-  AccordionPrimitive.Content,
-  styles.content,
-);
-export const AccordionTrigger = withClassName(
-  AccordionPrimitive.Trigger,
-  styles.trigger,
+type Props = {
+  data: Item[];
+};
+
+export default ({ data }: Props) => (
+  <div>
+    <Accordion.Root
+      type='single'
+      className='divide-y divide-gray-200 rounded-md border border-gray-400'
+    >
+      {data.map((item) => (
+        <Accordion.Item value={item.title} className='' key={item.title}>
+          <Accordion.Trigger className='flex w-full items-center justify-between bg-indigo-500 px-4 py-2 text-indigo-50'>
+            {item.title}
+          </Accordion.Trigger>
+          <Accordion.Content
+            className={`${styles['accordion-content']} overflow-hidden`}
+          >
+            <div className='px-4 py-2'>{item.content}</div>
+          </Accordion.Content>
+        </Accordion.Item>
+      ))}
+    </Accordion.Root>
+  </div>
 );

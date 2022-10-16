@@ -1,12 +1,17 @@
 import { Popover, PopoverTrigger, PopoverContent } from './components/Popover';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionContent,
-  AccordionTrigger,
-  AccordionHeader,
-} from './components/Accordion/Accordion';
+import Accordion from './components/Accordion/Accordion';
 import Dialog from './components/Dialog/Dialog';
+
+const accordionData = [
+  {
+    title: 'title-1',
+    content: 'content-1',
+  },
+  {
+    title: 'title-2',
+    content: 'content-2',
+  },
+];
 
 const App = () => {
   return (
@@ -30,28 +35,12 @@ const App = () => {
         </Popover>
       </div>
 
-      <div>
-        <h2 className='mt-12 mb-4 text-xl font-bold'>
-          Accordion (CSS modules)
-        </h2>
-        <Accordion type='single'>
-          <AccordionItem value='item-1'>
-            <AccordionHeader>
-              <AccordionTrigger>title-1</AccordionTrigger>
-            </AccordionHeader>
-            <AccordionContent>content-2</AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value='item-2'>
-            <AccordionHeader>
-              <AccordionTrigger>title-2</AccordionTrigger>
-            </AccordionHeader>
-            <AccordionContent>content-2</AccordionContent>
-          </AccordionItem>
-        </Accordion>
+      <div className='w-60'>
+        <h2 className='mb-4 text-xl font-bold'>Accordion</h2>
+        <Accordion data={accordionData} />
       </div>
 
-      <Dialog />
+      {/* <Dialog /> */}
     </div>
   );
 };
