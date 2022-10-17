@@ -11,8 +11,12 @@ export default () => (
       open
     </AlertDialog.Trigger>
     <AlertDialog.Portal>
-      <AlertDialog.Overlay className='fixed inset-0 bg-gray-500 opacity-80' />
-      <AlertDialog.Content className='fixed	inset-2/4 h-fit w-4/5 max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-6'>
+      <AlertDialog.Overlay
+        className={`${styles.overlay} fixed inset-0 bg-gray-500 opacity-50`}
+      />
+      <AlertDialog.Content
+        className={`${styles.content} fixed inset-2/4 h-fit w-4/5 max-w-2xl -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-6`}
+      >
         <AlertDialog.Title className='text-2xl font-bold text-amber-600'>
           title
         </AlertDialog.Title>
