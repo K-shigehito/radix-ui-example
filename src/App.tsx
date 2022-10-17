@@ -1,6 +1,5 @@
-import { Popover, PopoverTrigger, PopoverContent } from './components/Popover';
 import Accordion from './components/Accordion/Accordion';
-import Dialog from './components/Dialog/Dialog';
+import AlertDialog from './components/AlertDialog/AlertDialog';
 
 const accordionData = [
   {
@@ -25,22 +24,15 @@ const App = () => {
         minHeight: '100vh',
       }}
     >
-      <div>
-        <h2 className='mb-4 text-xl font-bold'>Popover</h2>
-        <Popover>
-          <PopoverTrigger className='bg-indigo-500 hover:bg-indigo-600'>
-            trigger
-          </PopoverTrigger>
-          <PopoverContent>content</PopoverContent>
-        </Popover>
-      </div>
-
       <div className='w-60'>
         <h2 className='mb-4 text-xl font-bold'>Accordion</h2>
         <Accordion data={accordionData} />
       </div>
 
-      {/* <Dialog /> */}
+      <div className='w-60'>
+        <h2 className='mb-4 text-xl font-bold'>AlertDialog</h2>
+        <AlertDialog />
+      </div>
     </div>
   );
 };

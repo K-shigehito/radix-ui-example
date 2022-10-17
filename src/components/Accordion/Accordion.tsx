@@ -18,9 +18,11 @@ export default ({ data }: Props) => (
     >
       {data.map((item) => (
         <Accordion.Item value={item.title} className='' key={item.title}>
-          <Accordion.Trigger className='flex w-full items-center justify-between bg-indigo-500 px-4 py-2 text-indigo-50'>
-            {item.title}
-          </Accordion.Trigger>
+          <Accordion.Header>
+            <Accordion.Trigger className='flex w-full items-center justify-between bg-indigo-500 px-4 py-2 text-indigo-50'>
+              {item.title}
+            </Accordion.Trigger>
+          </Accordion.Header>
           <Accordion.Content
             className={`${styles['accordion-content']} overflow-hidden`}
           >
