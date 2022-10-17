@@ -1,3 +1,4 @@
+import { LayoutWrapper } from './components/LayoutWrapper/LayoutWrapper';
 import Accordion from './components/Accordion/Accordion';
 import AlertDialog from './components/AlertDialog/AlertDialog';
 
@@ -24,15 +25,13 @@ const App = () => {
         minHeight: '100vh',
       }}
     >
-      <div className='w-60'>
-        <h2 className='mb-4 text-xl font-bold'>Accordion</h2>
+      <LayoutWrapper title='Accordion'>
         <Accordion data={accordionData} />
-      </div>
+      </LayoutWrapper>
 
-      <div className='w-60'>
-        <h2 className='mb-4 text-xl font-bold'>AlertDialog</h2>
+      <LayoutWrapper title='AlertDialog'>
         <AlertDialog />
-      </div>
+      </LayoutWrapper>
     </div>
   );
 };

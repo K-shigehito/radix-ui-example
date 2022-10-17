@@ -21,7 +21,7 @@ export default () => (
           title
         </AlertDialog.Title>
         <AlertDialog.Description className='mt-4'>
-          descriptin
+          description
         </AlertDialog.Description>
         <div className='mt-8 flex justify-end gap-4'>
           <AlertDialog.Cancel className='cursor-pointer rounded-md bg-gray-100 px-4 py-2 font-bold text-gray-800'>
