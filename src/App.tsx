@@ -2,6 +2,7 @@ import { LayoutWrapper } from './components/LayoutWrapper/LayoutWrapper';
 import Accordion from './components/Accordion/Accordion';
 import AlertDialog from './components/AlertDialog/AlertDialog';
 import Checkbox from './components/Checkbox/Checkbox';
+import Collapsible from './components/Collapsible/Collapsible';
 
 const accordionData = [
   {
@@ -36,6 +37,10 @@ const App = () => {
 
       <LayoutWrapper title='Checkbox'>
         <Checkbox />
+      </LayoutWrapper>
+
+      <LayoutWrapper title='Cllapsible'>
+        <Collapsible />
       </LayoutWrapper>
     </div>
   );
