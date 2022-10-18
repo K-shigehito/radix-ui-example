@@ -3,6 +3,7 @@ import Accordion from './components/Accordion/Accordion';
 import AlertDialog from './components/AlertDialog/AlertDialog';
 import Checkbox from './components/Checkbox/Checkbox';
 import Collapsible from './components/Collapsible/Collapsible';
+import Dialog from './components/Dialog/Dialog';
 
 const accordionData = [
   {
@@ -41,6 +42,10 @@ const App = () => {
 
       <LayoutWrapper title='Collapsible'>
         <Collapsible />
+      </LayoutWrapper>
+
+      <LayoutWrapper title='Dialog'>
+        <Dialog />
       </LayoutWrapper>
     </div>
   );
