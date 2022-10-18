@@ -6,7 +6,9 @@ type Props = {
 export const LayoutWrapper = ({ children, title }: Props) => {
   return (
     <div className='w-60'>
-      <h2 className='mb-4 text-xl font-bold'>{title}</h2>
+      <h2 className='mb-4 flex items-center gap-2 text-xl font-bold before:content-["・"]'>
+        {title}
+      </h2>
       {children}
     </div>
   );

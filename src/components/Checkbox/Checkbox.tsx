@@ -12,7 +12,7 @@ export default () => (
         <CheckIcon />
       </Checkbox.Indicator>
     </Checkbox.Root>
-    <label htmlFor='c1' className='select-none text-lg font-bold'>
+    <label htmlFor='c1' className='select-none text-lg'>
       check box test
     </label>
   </div>

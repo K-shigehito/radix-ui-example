@@ -22,7 +22,7 @@ const App = () => {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '40px',
+        gap: '64px',
         padding: '16px',
         backgroundColor: '#f5f5f4',
         minHeight: '100vh',
