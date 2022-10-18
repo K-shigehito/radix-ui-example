@@ -39,7 +39,7 @@ const App = () => {
         <Checkbox />
       </LayoutWrapper>
 
-      <LayoutWrapper title='Cllapsible'>
+      <LayoutWrapper title='Collapsible'>
         <Collapsible />
       </LayoutWrapper>
     </div>
